@@ -1,0 +1,34 @@
+<div class="container">
+    <table class="table " style="margin-top: 100px;">
+
+
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">firstName</th>
+            <th scope="col">lastName</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Phone</th>
+           
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let s of students">
+            <th scope="row">{{s._id}}</th>
+            <td>{{s.firstName}}</td>
+            <td>{{s.lastName}}</td>
+            <td>{{s.email}}</td>
+            <td>{{s.phone}}</td>
+          
+            <td>
+                
+                <button class="btn btn-warning" (click)="goToEdit(s._id)" style="margin-left: 15px;">Edit</button>
+                <button class="btn btn-danger" style="margin-left: 15px;" (click)="goToDeleteById(s._id)" >Delete</button>
+            </td>
+           
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>

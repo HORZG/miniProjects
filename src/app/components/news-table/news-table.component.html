@@ -1,0 +1,32 @@
+<div class="container">
+    <table class="table" style="margin-top: 100px;">
+        <thead>
+          <tr >
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Date</th>
+            <th scope="col">Importance</th>
+            <th scope="col">description</th>
+            <th scope="col">Actions</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let n of news">
+            <th scope="row">{{n.id}}</th>
+            <td>{{n.title}}</td>
+            <td>{{n.date}}</td>
+            <td>{{n.importance}}</td>
+            <td>{{n.description}}</td>
+           
+            <td>
+                <button class="btn btn-success" (click)="goToDisplay(m.id)" style="margin-left: 15px;">Display</button>
+                <button class="btn btn-warning" (click)="goToEdit(m.id)" style="margin-left: 15px;">Edit</button>
+                <button class="btn btn-danger" style="margin-left: 15px;">Delete</button>
+            </td>
+           
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>

@@ -1,0 +1,19 @@
+<div class="container" style="margin-top: 200px;">
+    <div class="row fill_height">
+        <div class="col fill_height">
+            <form #addCourseForm="ngForm" (ngSubmit)="addCourse()">
+                <div class="counter_form_title">Add Course</div>
+                <input type="text" class="counter_input" placeholder="Subject:" [(ngModel)]=" newCourse.subject" name="sub">
+            
+                <input type="text" class="counter_input" placeholder="Duration:" [(ngModel)]="newCourse.duration" name="duration">
+                <input type="text" class="counter_input" placeholder="Price per Hour:" [(ngModel)]="newCourse.price" name="price">
+                <input type="text" class="counter_input" placeholder="level:" [(ngModel)]="newCourse.lvl" name="level">
+                <input type="text" class="counter_input" placeholder="Teacher's Name:" [(ngModel)]="newCourse.teacher" name="teacher">
+                <input type="text" class="counter_input" placeholder="IdTeacher:" [(ngModel)]="newCourse.idTeacher" name="teacher">
+                <input type="text" class="counter_input" placeholder="Places left:" [(ngModel)]="newCourse.placesLeft" name="pleft">
+                <input type="date" class="counter_input" placeholder="Date:" [(ngModel)]="newCourse.date" name="Date">
+                <input type="submit" class="counter_form_button" value="Add Course">
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,135 @@
+<!-- Header -->
+
+<header class="header">
+			
+    <!-- Top Bar -->
+    <div class="top_bar">
+        <div class="top_bar_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="top_bar_content d-flex flex-row align-items-center justify-content-start" >
+                            <ul class="top_bar_contact_list">
+                                <li style="margin-left: 100px;"><div class="question">Have any questions?</div></li>
+                                <li style="margin-left: 100px;">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <div>001-1234-88888</div>
+                                </li>
+                                <li style="margin-left: 100px;">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    <div>info.deercreative@gmail.com</div>
+                                </li>
+                            </ul>
+                            
+
+                            
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>				
+    </div>
+
+    <!-- Header Content -->
+    <div class="header_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                        <div class="logo_container">
+                            <a href="#">
+                                <div class="logo_text" >E-<span>Education</span></div>
+                            </a>
+                        </div>
+                        <nav class="main_nav_contaner ml-auto">
+                            <ul class="main_nav">
+                                <li class="active"><a routerLink="">Home</a></li>
+                                <!-- <li><a href="about.html">About</a></li> -->
+                               
+                                <li class="nav-item dropdown" >
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Courses
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                                        <li><a class="dropdown-item" routerLink="courses">All Courses</a></li>
+                                        <li *ngIf = "role =='teacher'"><a class="dropdown-item" routerLink="addcourse">Add New Course</a></li>
+                                      <li><a class="dropdown-item" routerLink="searchbyname">Seach course by Subject</a></li>
+                                      
+                                     
+                                    </ul>
+                                  </li>
+
+                                  <li class="nav-item dropdown" >
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Events
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                                        <li><a class="dropdown-item" routerLink="events">All Events</a></li>
+                                        <li *ngIf = "role=='admin'"><a class="dropdown-item" routerLink="addEvent">Add New Event</a></li>
+                                      <li><a class="dropdown-item" routerLink="searchbyprice">Seach Events by price</a></li>
+                                      
+                                     
+                                    </ul>
+                                  </li>
+
+
+                                  <li class="nav-item dropdown" >
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        News
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                                        <li><a class="dropdown-item" routerLink="techNews">Tech New</a></li>
+                                        <li><a class="dropdown-item" routerLink="sciNews" >Science News</a></li>
+                                      <li><a class="dropdown-item" routerLink="news">Business News</a></li>
+                                   
+                                    </ul>
+                                  </li>
+                              
+                                
+                                
+                                <!-- <li><a routerLink="contact">Contact</a></li> -->
+                                <li *ngIf = "role =='admin'"><a routerLink="admin">My Dashboard</a></li>
+                                <li *ngIf = '!idConnectedUser' class="nav-item dropdown" >
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                      Access Your Account
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                      <li><a class="dropdown-item" routerLink="login" >Login</a></li>
+                                      <li><a class="dropdown-item" routerLink="signup">SignUp Student</a></li>
+                                      <li><a class="dropdown-item" routerLink="signUpTeacher">SignUp Teacher</a></li>
+                                    </ul>
+                                  </li>
+
+                                  <li *ngIf = 'idConnectedUser' class="nav-item dropdown" >
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                        <li><a routerLink="profile" style="margin-right: 10px;"> <img width="20px" height="20px" src="/assets/images/icon_1.png" alt=""> Welcome {{user.firstName}}</a></li>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                      <li><a class="dropdown-item" routerLink="login" (click)="logOut()" >Logout</a></li>
+                               
+                                    </ul>
+                                  </li>
+                                
+    
+                            </ul>
+                            <div class="search_button"><i class="fa fa-search" aria-hidden="true"></i></div>
+
+                            <!-- Hamburger -->
+
+                            <div class="shopping_cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
+                            <div class="hamburger menu_mm">
+                                <i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+                            </div>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

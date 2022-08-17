@@ -1,0 +1,13 @@
+<div class="container" style="margin-top: 200px;">
+    <div class="row fill_height">
+        <div class="col fill_height">
+            <form #editEventForm="ngForm" (ngSubmit)="editEvent(event)">
+                <div class="counter_form_title">Add Event</div>
+                <input type="text" class="counter_input" placeholder="title:" [(ngModel)]=" event.title" name="title">
+                <input type="text" class="counter_input" placeholder="date:" [(ngModel)]="event.date" name="date">
+                <input type="text" class="counter_input" placeholder="description:" [(ngModel)]="event.description" name="desc">
+                <input type="submit" class="counter_form_button" value="Edit Event">
+            </form>
+        </div>
+    </div>
+</div>

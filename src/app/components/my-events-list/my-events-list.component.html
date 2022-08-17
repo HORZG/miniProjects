@@ -1,0 +1,33 @@
+<div class="container" style="padding-top: 100px;">
+    <table class="table " style="margin-top: 100px;">
+
+
+        <thead>
+          <tr>
+           
+            <th scope="col">Event</th>
+            <th scope="col">Date</th>
+            <th scope="col">Description</th>
+           
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let e of myEvents">
+            
+            <td>{{e.title}}</td>
+            <td>{{e.date}}</td>
+            <td>{{e.description}}</td>
+            
+          
+            <td>
+                <button class="btn btn-success" *ngIf="role=='admin'" (click)="goToDisplay(t._id)">Display</button>
+                <button *ngIf="role=='admin'" class="btn btn-warning" (click)="goToEdit(t._id)" style="margin-left: 15px;">Edit</button>
+                <button class="btn btn-danger" style="margin-left: 15px;" (click)="goToDeleteById(e._id)" >Cancel Participation</button>
+            </td>
+           
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>

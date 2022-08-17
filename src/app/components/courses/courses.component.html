@@ -1,0 +1,32 @@
+
+	<div class="courses" style='margin-top: 200px;'>
+		<div class="section_background parallax-window" data-parallax="scroll" data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+		
+		<div class="container">
+			
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<h2 class="section_title">Popular Online Courses</h2>
+						<div class="section_subtitle"><p style="font-size: 30px; color: rgb(139, 0, 0); font-family: 'Times New Roman', Times, serif;">Interessé ! connectez-vous et résérver une place!</p></div>
+					</div>
+				</div>
+			</div>
+			<div class="row courses_row">
+				
+				<!-- Course -->
+				<div class="col-lg-4 course_col"  *ngFor="let c of courses" >
+					<app-course [course] = "c"></app-course>
+				</div>
+				
+			
+
+			
+			</div>
+			<!-- <div class="row">
+				<div class="col">
+					<div class="courses_button trans_200"><a routerLink="courses">view all courses</a></div>
+				</div>
+			</div> -->
+		</div>
+	</div>

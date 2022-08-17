@@ -1,0 +1,45 @@
+<div class="student-profile py-4" style="margin-top: 150px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card shadow-sm">
+            <div class="card-header bg-transparent text-center">
+              <img class="profile_img" src="{{user.photo}}" style="width: 80px; height:80px ;" alt="student dp">
+              <h3>{{user.firstName}}</h3>
+            </div>
+            <div class="card-body">
+              <p class="mb-0"><strong class="pr-1">Student ID:</strong>{{user._id}}</p>
+             
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="mb-0"><i class="far fa-clone pr-1"></i>General Information</h3>
+            </div>
+            <div class="card-body pt-0">
+              <form #editProfileForm="ngForm" (ngSubmit)="editProfile(user)">
+                <div class="counter_form_title">Your can edit your informations here</div>
+                <input type="text" class="counter_input" placeholder="first Name:" [(ngModel)]="user.firstName" name="firstName">
+                <input type="text" class="counter_input" placeholder="last Name:" [(ngModel)]="user.lastName" name="lastName">
+                <input type="text" class="counter_input" placeholder="email:" [(ngModel)]="user.email" name="email">
+                <input type="password" class="counter_input" placeholder="Password:" [(ngModel)]="user.password" name="subject">
+                <input type="text" class="counter_input" placeholder="Phone:" [(ngModel)]="user.phone" name="career">
+                <input type="submit" class="btn btn-success"  value="Edit Your informations">
+            </form>
+            </div>
+          </div>
+            <div style="height: 26px"></div>
+          <div class="card shadow-sm">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Other Information</h3>
+            </div>
+            <div class="card-body pt-0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

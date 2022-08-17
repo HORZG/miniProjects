@@ -1,0 +1,36 @@
+
+<div class="course" style="margin-top: 300px;margin-bottom: 30px;" >
+    <div class="course_image" ><img  src="assets/images/subjects.jpg" style="width:500px; height:500px; padding-left:20px;"  alt=""></div>
+    <div class="course_body">
+        <h3 class="course_title"><a  href="course.html">{{course.subject}}</a></h3>
+        <div class="course_teacher"> Teacher : <b>{{course.teacher}}</b></div>
+        <div class="course_text">
+            <p>{{course.duration}} min </p>
+        </div>
+        <div class="course_text">
+            <p> About Course : {{course.description}}  </p>
+        </div>
+    </div>
+    <div class="course_footer">
+        <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+            <div class="course_info">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                <span [ngClass] = '{
+                    "red" : placesColor(course.placesLeft) == 0,
+                    "green" : placesColor(course.placesLeft) == 1
+                }'>
+                    {{course.placesLeft}} place(s) left</span>
+              
+            </div>
+            <div>
+               
+                <span style="font-size: 15px;"> Date: {{course.date}} </span>
+            </div>
+            
+            <div class="course_price ml-auto">{{course.price}} TND</div>
+        </div>
+    </div>
+    <button  class="btn btn-success" style="margin-left: 40px ;" (click)="goToDisplay(course._id)">view course</button>
+    <button *ngIf = "role == 'student'" style="margin-left: 50px;" class="btn btn-success" style="margin-left: 40px ;" (click)="joinCourse(course)">Join Course</button>
+</div>
+

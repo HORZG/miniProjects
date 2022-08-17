@@ -1,0 +1,23 @@
+
+<div class="cont">
+  
+    <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-top: 200px; margin-left: 700px;">
+        <li class="nav-item" role="presentation" >
+          <button class="nav-link active" id="teacher-tab" data-bs-toggle="tab" data-bs-target="#coordonnées" type="button" role="tab" aria-controls="teacher" aria-selected="true"> <img width="20px" height="20px" src="/assets/images/profile.png" alt=""> Mes coordonnées</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#courses" type="button" role="tab" aria-controls="profile" aria-selected="false"><img width="20px" height="20px" src="/assets/images/courseslist.png" alt="">Mes cours<script></script></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="event-tab" data-bs-toggle="tab" data-bs-target="#event" type="button" role="tab" aria-controls="event" aria-selected="false"> <img width="20px" height="20px" src="/assets/images/eventslist.png" alt="">  évènements</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent" >
+    
+        <div class="tab-pane fade show active" id="coordonnées" role="tabpanel" aria-labelledby="teacher-tab"><app-personal-informations></app-personal-informations></div>
+        <div class="tab-pane fade" id="courses" role="tabpanel" aria-labelledby="profile-tab"><app-my-courses-list ></app-my-courses-list></div>
+        <div class="tab-pane fade" id="event" role="tabpanel" aria-labelledby="event-tab"><app-my-events-list></app-my-events-list></div>
+    
+      
+      </div>
+    </div>

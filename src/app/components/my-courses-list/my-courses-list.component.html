@@ -1,0 +1,35 @@
+<div class="container" style="padding-top: 100px;">
+    <table class="table " style="margin-top: 100px;">
+
+
+        <thead>
+          <tr>
+            
+            <th scope="col">Subject</th>
+            <th scope="col">Date</th>
+            <th scope="col">Price </th>
+            <th scope="col">Statut </th>
+           <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let c of myCourses">
+            
+            <td>{{c.subject}}</td>
+           <td>{{c.date}}</td>
+            <td>{{c.price}} TND</td>
+            <td>{{c.statut}}</td>
+          
+            <td>
+                <button class="btn btn-success" (click)="goToDisplay(c._id)">Display</button>
+             
+                <button *ngIf = "role == 'student'" class="btn btn-danger" style="margin-left: 15px;" (click)="goToDeleteById(c)" >Cancel</button>
+                <button *ngIf = "role == 'teacher'" class="btn btn-warning" style="margin-left: 15px;"  >Edit</button>
+                <button *ngIf = "role == 'teacher'" class="btn btn-info" style="margin-left: 15px;" (click)="confirm(c._id)" >Confirmer la RSV</button>
+            </td>
+           
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>

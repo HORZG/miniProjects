@@ -1,0 +1,16 @@
+<div class="container" style="margin-top: 200px;">
+    <div class="row fill_height">
+        <div class="col fill_height">
+            <form #editCourseForm="ngForm" (ngSubmit)="editCourse(course)">
+                <div class="counter_form_title">Edit Course</div>
+                <input type="text" class="counter_input" placeholder="Subject:" [(ngModel)]="course.subject" name="subject">
+                <input type="text" class="counter_input" placeholder="duration:" [(ngModel)]="course.duration" name="duration">
+                <input type="text" class="counter_input" placeholder="price:" [(ngModel)]="course.price" name="price">
+                <input type="number" class="counter_input" placeholder="lvl:" [(ngModel)]="course.lvl" name="lvl">
+                <input type="text" class="counter_input" placeholder="teacher:" [(ngModel)]="course.teacher" name="teacher">
+                <input type="text" class="counter_input" placeholder="placesLeft:" [(ngModel)]="course.placesLeft" name="placesLeft">
+                <input type="submit" class="counter_form_button"  value="Edit Course">
+            </form>
+        </div>
+    </div>
+</div>

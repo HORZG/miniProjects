@@ -1,0 +1,23 @@
+
+    <div class="event event_left" style="padding-top: 30px; background-color: rgb(220, 251, 253); margin-top: 30px; padding-bottom: 10px;">
+        <div class="event_image"><img src="{{event.image}}" alt=""></div>
+        <div class="event_body d-flex flex-row align-items-start justify-content-start">
+            <div class="event_date">
+                <div class="d-flex flex-column align-items-center justify-content-center trans_200">
+                    <div class="event_day trans_200 fontSize">{{event.date}}</div>
+                    <!-- <div class="event_month trans_200">Aug</div> -->
+                </div>
+            </div>
+            <div class="event_content">
+                <div class="event_title"><a href="#">{{event.title}}</a></div>
+                <div class="event_info_container">
+                    <div class="event_info"><i class="fa fa-clock-o" aria-hidden="true"></i><b style="color:rgb(0, 0, 0);"><span style="font-size: 20px;">{{event.price}} $</span></b></div>
+                    <div class="event_info"><i class="fa fa-map-marker" aria-hidden="true"></i><span>{{event.price}} </span></div>
+                    <div class="event_text">
+                        <p>{{event.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button *ngIf = "role == 'student'" style="margin-left: 50px;" class="btn btn-info" style="margin-left: 40px ;" (click)="participate(event)" >Participate</button>
+    </div>

@@ -1,0 +1,24 @@
+
+
+		<div class="container" style="margin-top: 200px;">
+            <div class="row fill_height">
+                <div class="col fill_height">
+                    <form #searchEventForm="ngForm" (ngSubmit)="searchEventByPrice(event)">
+                        <div class="counter_form_title">Search Events</div>
+                        <input type="number" class="counter_input" placeholder="Max price" [(ngModel)]=" event.price" name="csub">
+                    
+            
+                        <input type="submit" class="btn btn-success" value="Search">
+                    </form>
+                </div>
+            </div>
+
+            <div class="row events_row">
+
+                <!-- Event -->
+                <div class="col-lg-4 event_col" *ngFor = 'let e of events'>
+                <app-event [event] = "e"></app-event>
+            </div>
+        </div>
+		
+

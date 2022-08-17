@@ -1,0 +1,26 @@
+<div class="container">
+<div class="course" style="margin-top: 100px;">
+    <div class="course_image"><img src="{{teacher.photo}}" alt=""></div>
+    <div class="course_body">
+        <h3 class="course_title"><a href="course.html">{{teacher.firstName}}</a></h3>
+        <div class="course_teacher">{{teacher.lastName}}</div>
+        <div class="course_text">
+            <p>{{teacher.firstName}}</p>
+        </div>
+    </div>
+    <div class="course_footer">
+        <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+            <div class="course_info">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                <span>20 Student</span>
+            </div>
+            <div class="course_info">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <span>5 Ratings</span>
+            </div>
+            <div class="course_price ml-auto">{{teacher.lastName}}</div>
+        </div>
+
+    </div>
+    <button class="btn btn-success" style="margin-left: 40px ;" (click)="goToDisplayTeacher(teacher._id)">Teacher Profile</button>
+</div></div>

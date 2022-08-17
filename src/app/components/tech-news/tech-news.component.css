@@ -1,0 +1,8 @@
+.box{
+    padding: 10px 10px;
+    background-color: rgb(227, 247, 252);
+}
+
+.box h5 {
+    font-style: italic;
+}
